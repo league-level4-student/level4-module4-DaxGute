@@ -5,6 +5,7 @@ import java.awt.Graphics;
 public abstract class Polymorph {
     int x;
     int y;
+  
     
     Polymorph(int x, int y){
    	 this.x = x;
@@ -16,4 +17,19 @@ public abstract class Polymorph {
     }
     
     public abstract void draw(Graphics g);
+    
+    int getX() {
+    	return x;
+    }
+    int getY() {
+    	return y;
+    }
+    
+    void setX(int a) {
+    	x = a;
+    }
+    void setY(int a) {
+    	y = a;
+    }
+ 
 }

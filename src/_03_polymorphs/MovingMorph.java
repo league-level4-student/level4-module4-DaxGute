@@ -3,24 +3,24 @@ package _03_polymorphs;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class BluePolymorph extends Polymorph{
+public class MovingMorph extends Polymorph{
 	int width;
 	int height;
-	
-	BluePolymorph(int x, int y) {
+	MovingMorph(int x, int y) {
 		super(x, y);
-	}
 
-	@Override
-	public void draw(Graphics g) {
-		g.setColor(Color.blue);
-		g.fillRect(x, y, width, height);
 	}
-	
-	   
-    int getWidth() {
-    	return width;
-    }
+	 public void update(){
+	   	 x ++;
+	   	 y ++;
+	 }
+	 public void draw(Graphics g) {
+			g.setColor(Color.black);
+			g.fillRect(x, y, width, height);
+	}
+	int getWidth() {
+		return width;
+	}
     int getHeight() {
     	return height;
     }
@@ -31,5 +31,5 @@ public class BluePolymorph extends Polymorph{
     void setHeight(int a) {
     	height = a;
     }
-	
+
 }
