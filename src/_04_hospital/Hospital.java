@@ -22,15 +22,15 @@ public class Hospital {
 		return Patience;
 	}
 
-	public void assignPatientsToDoctors() {
-		for (int i = 0; i < staff.size(); i++) {
-			for (int j = i*3; j < (i+1)*3; j++) {
-				try {
-					staff.get(i).assignPatient(Patience.get(j));
-				} catch (DoctorFullException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+	public void assignPatientsToDoctors() throws DoctorFullException {
+		int PatientsNotAssigned = Patience.size();
+		int staffNum = 0;
+		while (PatientsNotAssigned > 0){
+			try {
+				staff.get(staffNum).assignPatient(Patience.get(PatientsNotAssigned - 1));
+				PatientsNotAssigned --;
+			} catch (DoctorFullException e) {
+				staffNum ++;
 			}
 		}
 		

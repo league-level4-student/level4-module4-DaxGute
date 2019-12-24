@@ -109,7 +109,7 @@ assertTrue(testDoctor.getPatients().size() == 3);
 		testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
-		testHospital.addPatient(new Patient());
+		
 
 
 		
